@@ -2,13 +2,16 @@
 using namespace std;
 
 int main() {
-	char alarme = '\a';
-	int senha;
-	cout << "Digite a senha: ________\b\b\b\b\b\b\b\b";
-	cin >> senha;
+	bool buzinar = false;
 
-	cout << alarme << "Sua senha foi roubada!\a\n";
-	cout << "Joaozinho \"O Hacker\"\nEsteve aqui!\n";
+	cout << "Buzinar?";
+	cin >> buzinar;
 
+	if (buzinar == true) {
+		cout << "Buzina\a\a\a\a\a";
+	}
+	else {
+		cout << "Silencio" << endl;
+	}
 	return 0;
 }
