@@ -1,18 +1,17 @@
 #include <iostream>
 using namespace std;
 
+int somaVetor(int[]);
+
 int main() {
-	int vet[3];
+	int batatas[3] = { 7, 6, 8 };
+	cout << "Total de batatas = ";
+	cout << somaVetor(batatas) << endl;
 
-	cout << "Conteudo da posicao 0: " << vet[0] << endl;
-	cout << "Conteudo da posicao 1: " << vet[1] << endl;
-	cout << "Conteudo da posicao 2: " << vet[2] << endl;
+	system("pause");
+	return 0;
+}
 
-	vet[0] = 0; vet[1] = 0; vet[2] = 0;
-	cout << "Conteudo da posicao 0: " << vet[0] << endl;
-	cout << "Conteudo da posicao 1: " << vet[1] << endl;
-	cout << "Conteudo da posicao 2: " << vet[2] << endl;
-
-	cout << "\nO vetor tem " << sizeof vet << " bytes. \n";
-	cout << "Um elemento tem " << sizeof vet[0] << " bytes. \n";
+int somaVetor(int vet[]) {
+	return vet[0] + vet[1] + vet[2];
 }
