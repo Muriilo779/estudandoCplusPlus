@@ -2,13 +2,17 @@
 using namespace std;
 
 int main() {
-	int batatas[3] = {7, 8, 6 };
-	int custo[3] = { 20, 30, 5 };
-	cout << "Quantidade de batatas e = ";
-	cout << batatas[0] + batatas[1] + batatas[2];
-	cout << " O pacote com " << batatas[1] << " Batatas custa " << custo[1] << " centavos por batata";
+	int vet[3];
 
-	int total = batatas[1] * custo[1]; 
-	cout << " O segundo pacote custa " << total << " centavos. \n ";
-	return 0;
+	cout << "Conteudo da posicao 0: " << vet[0] << endl;
+	cout << "Conteudo da posicao 1: " << vet[1] << endl;
+	cout << "Conteudo da posicao 2: " << vet[2] << endl;
+
+	vet[0] = 0; vet[1] = 0; vet[2] = 0;
+	cout << "Conteudo da posicao 0: " << vet[0] << endl;
+	cout << "Conteudo da posicao 1: " << vet[1] << endl;
+	cout << "Conteudo da posicao 2: " << vet[2] << endl;
+
+	cout << "\nO vetor tem " << sizeof vet << " bytes. \n";
+	cout << "Um elemento tem " << sizeof vet[0] << " bytes. \n";
 }
