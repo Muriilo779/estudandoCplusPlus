@@ -1,10 +1,22 @@
 #include <iostream>
 using namespace std;
+union regkey {
+	int chave;
+	char codigo[8];
+};
 
 int main() {
-	char cat[5] = { 'm', 'i', 'a', 'r', '\0' };
-	char dog[5] = { 'l', 'a', 't', 'i', 'r' };
+	cout << "Qual seu tipo de senha?\n[1] chave\n[2] codigo\nOpcao: ";
+	int tipo;
+	cin >> tipo;
 
-	cout << cat << endl;
-	cout << dog << endl;
+	regkey senha;
+	if (tipo == 1) {
+		cout << "Digite sua chave: ";
+		cin >> senha.chave;
+	}
+	else {
+		cout << "Digite seu codigo: "; 
+		cin >> senha.codigo; 
+	}
 }
