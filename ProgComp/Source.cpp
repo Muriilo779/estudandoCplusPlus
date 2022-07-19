@@ -1,19 +1,18 @@
 #include <iostream>
 using namespace std;
- enum mes {Jan=1,Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez};
+
 int main() {
-	mes inicio, fim;
-	inicio = Fev;
-	fim = Nov;
+	int total = 6;
+	int* ptr;
 
-	cout << "Digite o numero do mes atual: ";
-	int atual;
-	cin >> atual;
+	ptr = &total;
 
-	if(atual >= inicio && atual <= fim) {
-		cout << "Voce esta em periodo de aulas.\n";
-	}
-	else {
-		cout << "Ferias!\n";
-	}
+	cout << "Conteudo de total = " << total << endl;
+	cout << "Conteudo apontado = " << *ptr << endl;
+
+	cout << "Endereco de total = " << &total << endl;
+	cout << "Endereco de ptr = " << ptr << endl;
+
+	*ptr = *ptr + 1;
+	cout << "Agora total vale = " << total << endl;
 }
