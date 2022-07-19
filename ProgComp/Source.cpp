@@ -1,22 +1,19 @@
 #include <iostream>
 using namespace std;
-union regkey {
-	int chave;
-	char codigo[8];
-};
-
+ enum mes {Jan=1,Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez};
 int main() {
-	cout << "Qual seu tipo de senha?\n[1] chave\n[2] codigo\nOpcao: ";
-	int tipo;
-	cin >> tipo;
+	mes inicio, fim;
+	inicio = Fev;
+	fim = Nov;
 
-	regkey senha;
-	if (tipo == 1) {
-		cout << "Digite sua chave: ";
-		cin >> senha.chave;
+	cout << "Digite o numero do mes atual: ";
+	int atual;
+	cin >> atual;
+
+	if(atual >= inicio && atual <= fim) {
+		cout << "Voce esta em periodo de aulas.\n";
 	}
 	else {
-		cout << "Digite seu codigo: "; 
-		cin >> senha.codigo; 
+		cout << "Ferias!\n";
 	}
 }
